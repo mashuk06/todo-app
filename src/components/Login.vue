@@ -21,9 +21,10 @@
     const login = auth.login(email.value, password.value)
     if (login) {
       toast.success('Login successful!')
+      toast.info('Welcome to dashboard '+ email.value)
       setTimeout(() => {
         router.push('/dashboard')
-      }, 1000)
+      }, 2000)
     }else{
       toast.error('Username Password did not matched!')
       return false
